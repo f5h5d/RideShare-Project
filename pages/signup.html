@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/signup.css" rel="stylesheet" type="text/css" />
+  <title>RideShare - Carpooling</title>
+  <script src="https://kit.fontawesome.com/7069c2a80b.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../js/signup.js" defer></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"
+    defer></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-warning navbar-warning py-3 fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="">
+        <img src="https://assets.carpages.ca/dealersite/prod-wp-green-light-truck-auto/uploads/2019/12/autorttr-suv.png"
+          width="54" height="30" class="d-inline-block align-top ml-2" alt="">
+        Community RideShare
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="/pages/find-a-ride.html" class="nav-link">Find a Ride</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/start-a-trip.html" class="nav-link">Start a trip</a>
+          </li>
+          <li class="nav-item">
+            <a href="#more" class="nav-link">More</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="form-container">
+    <div class="form-box">
+      <h1 id="title">Sign Up</h1>
+      <form>
+        <div class="input-group">
+
+          <div class="input-field">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="email" placeholder="Email">
+          </div>
+          <div class="input-field">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" placeholder="Password">
+          </div>
+          <div class="input-field" id="postal-code-field">
+            <i class="fa-solid fa-house"></i>
+            <input type="text" id="postal-code" placeholder="Postal Code">
+          </div>
+
+          <div class="btn-field">
+            <button type="button" id="signupBtn">Sign Up</button>
+            <button type="button" id="signinBtn" class="disable">Sign In</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</body>
+
+</html>

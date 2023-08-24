@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --bg: rgb(26, 32, 45);
+}
+
+* {
+  color: white;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: rgb(26, 32, 45);
+}
+
+body {
+  background: rgb(26, 32, 45) !important;
+}
+
+
+/* MAIN */
+.header-showcase {
+  border-bottom: 2px solid #6c757d;
+}
+
+.header-container { 
+  margin-top: 7vh;
+  display: flex;
+}
+
+.header1 {
+  width: 100%;
+  /* margin-right: 5vw; */
+  /* margin-top: 10vh; */
+  /* width: 40vw;
+  height: 55vh;
+  margin-left: 5vw;
+  margin-top: 10vh; */
+}
+
+/* .header1-image {
+  width: 45%;
+  height: 75vh;
+  width: 50vw;
+  margin-top: 10vh;
+} */
+
+#str {
+  width: 100%;
+  padding: 20px;
+  min-height: 225px;
+  /* min-height: 360px; */
+  font-family: sans-serif;
+  font-size: 4.5vw;
+  /* font-size: 5rem; */
+  line-height: 80px;
+  margin: 20px auto;
+  color: #fff;
+  font-weight: bold;
+}
+
+#str:after {
+  content: "|";
+  animation: blink 1s infinite 5s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button {
+  background: none;
+  outline: none;
+  border: 1px solid #ffc107;
+  padding: 1rem 2rem;
+  margin: 0 0.5vw;
+  border-radius: 4px;
+}
+
+.button-signup:hover {
+  background: #ffc107;
+}
+
+.button-login:hover {
+  background: #ffc107;
+}
+
+.carbon-emmisions-section {
+  min-height: 40vh;
+  /* background: #6c757d; */
+}
+
+/* FACTS */
+
+/* .carbon-emmisions-title {
+  margin-top: 0;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.fact-container {
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 100vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.fact {
+  text-align: center;
+  height: 20vh;
+}
+
+.fact-1 {
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
+  color: rgb(159, 164, 173);
+}
+
+.fact-2 {
+  border-left: 4px solid white;
+  border-bottom: 4px solid white;
+  color: rgb(159, 164, 173);
+}
+
+.fact-3 {
+  border-right: 4px solid white;
+  border-top: 4px solid white;
+  color: rgb(159, 164, 173);
+}
+
+.fact-4 {
+  border-left: 4px solid white;
+  border-top: 4px solid white;
+  color: rgb(159, 164, 173);
+}
+
+.large-text {
+  font-size: 7rem;
+  height: 15vh;
+} */
+
+/* SIGN UP */
+
+.sign-up-header>h1 {
+  font-size: 8rem;
+  text-align: center;
+}
+
+.form-container {
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.signup-form {
+  width: 80vw;
+  height: 30vh;
+  border-radius: 4px;
+  margin: 1vh;
+}
+
+.signup {
+  margin-top: 200px;
+  margin: 15px 50px;
+}
+
+.form-box {
+  margin-top: 50px;
+}
+
+.signup-address {
+  margin: 10px 65px;
+}
+
+.sign-up-btn {
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+  margin-left: 60px;
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+
+.sign-up-btn:hover {
+  background: transparent;
+  border: 1px solid white;
+  color: white !important;
+}
+
+/* LOG IN */
+
+.login-header>h1 {
+  font-size: 8rem;
+  text-align: center;
+}
+
+.form-container-login {
+  width: 100vw;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.login-form {
+  width: 80vw;
+  height: 25vh;
+  border-radius: 4px;
+  margin: 1vh;
+}
+
+.login {
+  margin-top: 200px;
+  margin: 15px 50px;
+}
+
+.form-box-login {
+  margin-top: 50px;
+}
+
+.login-btn {
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+  margin-left: 60px;
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+
+.login-btn:hover {
+  background: transparent;
+  border: 1px solid white;
+  color: white !important;
+}
