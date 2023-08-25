@@ -1,47 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RideShare - Carpooling</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link href="..css//style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RideShare - Carpooling</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"
-    defer></script>
-  <link href="..css//style.css" rel="stylesheet" type="text/css" />
-</head>
+  <body class="bg-primary-subtle">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="https://assets.carpages.ca/dealersite/prod-wp-green-light-truck-auto/uploads/2019/12/autorttr-suv.png"
+            width="54"
+            height="30"
+            class="d-inline-block align-top ml-2"
+            alt=""
+          />
+          Community RideShare
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<body>
-  <nav class="navbar navbar-expand-lg bg-warning navbar-warning py-3 fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="/index.html">
-        <img src="https://assets.carpages.ca/dealersite/prod-wp-green-light-truck-auto/uploads/2019/12/autorttr-suv.png"
-          width="54" height="30" class="d-inline-block align-top ml-2" alt="">
-        Community RideShare
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a href="pages/find-a-ride.html" class="nav-link">Find a Ride</a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/start-a-trip.html" class="nav-link">Start a Trip</a>
-          </li>
-          <li class="nav-item">
-            <a href="#more" class="nav-link">More</a>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="information.html" class="nav-link">Find a Ride</a>
+            </li>
+            <li class="nav-item">
+              <a href="start-a-trip.html" class="nav-link">Start a Trip</a>
+            </li>
+            <li class="nav-item">
+              <a href="#more" class="nav-link">More</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-</body>  
-  
+    <section class="p-5 mt-5">
+      <div class="container">
+        <h1 class="card bg-dark p-3 mb-3 text-warning mb-md-5 text-center">
+          Find a Ride Near You
+        </h1>
+        <div class="row text-center g-4 m">
+          <div class="col-md">
+            <div class="card bg-dark text-light h-100">
+              <div class="card-body text-center">
+                <h2 class="card-title text-warning">Distance from you</h2>
+                <p class="card-text">Name(s) - Destination(s) - Number(s) in a column</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-light h-100">
+              <div class="card-body text-center">
+                <h2 class="card-title text-warning">39%</h2>
+                <p class="card-text">
+                  is how much passenger vehicles account for yearly
+                  transportation emissions
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-light h-100">
+              <div class="card-body text-center">
+                <h2 class="card-title text-warning">4.2 Million</h2>
+                <p class="card-text">
+                  premature deaths are caused by air pollution each year
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-light h-100">
+              <div class="card-body text-center">
+                <h2 class="card-title text-warning">144 Hours</h2>
+                <p class="card-text">
+                  is how long a driver in major Canadian cities might spend in
+                  traffic per year
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
