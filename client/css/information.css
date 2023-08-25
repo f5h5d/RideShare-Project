@@ -48,6 +48,11 @@
   transform: translateX(-50%);
 }
 
+select {
+  outline: none;
+  border: none;
+  padding: 10px;
+}
 .input-field {
   width: 100%;
   background-color: #eaeaea;
