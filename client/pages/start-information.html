@@ -60,12 +60,11 @@
     
     <div class="form-container">
       <div class="form-box">
-        <h1 id="title">Driver Information</h1>
-        <form>
-          <div class="input-group">
-            <form>
-              <div class="input-group">
-                <select class="custom-select input-field" id="inputGroupSelect01">
+        <div class="form-box-driver">
+          <h1 id="title">Driver Information</h1>
+          <form>
+            <div class="input-group">
+              <select class="custom-select input-field" id="inputGroupSelect01">
                   <option selected>Choose...</option>
                   <option value="Bancroft">Bancroft</option>
                   <option value="Barrie">Barrie</option>
@@ -200,27 +199,28 @@
                   <option value="Woodstock">Woodstock</option>
                   <option value="York">York</option>
                 </select>
-            <div class="input-field">
-              <i class="fa-regular fa-calendar"></i>
-              <input type="date" name="leaving" />
+              <div class="input-field">
+                <i class="fa-regular fa-calendar"></i>
+                <input type="date" name="leaving" />
+              </div>
+              <!-- <div class="input-field">
+                <i class="fa-regular fa-calendar"></i>
+                <input type="name" id="name" placeholder="Time">
+              </div> -->
+              <div class="input-field">
+                <i class="fa-solid fa-phone"></i>
+                <input type="tel" id="phone" placeholder="Phone Number">
+              </div>
+              <div class="input-field">
+                <i class="fa-solid fa-chair"></i>
+                <input type="number" id="seats" placeholder="Seats">
+              </div>
+              <div class="btn-field">
+                <button type="submit" formaction="start-a-trip.html" id="signupBtn">Continue</button>
+              </div>
             </div>
-            <!-- <div class="input-field">
-              <i class="fa-regular fa-calendar"></i>
-              <input type="name" id="name" placeholder="Time">
-            </div> -->
-            <div class="input-field">
-              <i class="fa-solid fa-phone"></i>
-              <input type="tel" id="phone" placeholder="Phone Number">
-            </div>
-            <div class="input-field">
-              <i class="fa-solid fa-chair"></i>
-              <input type="number" id="seats" placeholder="Seats">
-            </div>
-            <div class="btn-field">
-              <button type="submit" formaction="start-a-trip.html" id="signupBtn">Continue</button>
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </body>
