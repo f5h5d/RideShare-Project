@@ -14,9 +14,9 @@
   position: relative;
 }
 
-.form-box {
+.form-box-rider {
   width: 90%;
-  height: 60%;
+  height: 38em;
   max-width: 450px;
   position: absolute;
   top: 50%;
@@ -25,7 +25,19 @@
   background: #fff;
   padding: 50px 60px 70px;
   text-align: center;
+}
 
+.form-box-driver {
+  width: 90%;
+  height: 40em;
+  max-width: 450px;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 50px 60px 70px;
+  text-align: center;
 }
 
 .form-box h1 {
