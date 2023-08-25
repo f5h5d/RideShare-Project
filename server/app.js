@@ -27,21 +27,21 @@ function checkEmailExists(email) {
 }
 
 app.post('/api/register', async (req, res) => {
-    const { email, password, postalCode } = req.body;
+    const { email, password, fullName } = req.body;
 
     try {
         const emailExists = await checkEmailExists(email);
         if (emailExists) {
             res.json({ message: 'Email already exists' });
         } else {
-            const insertQuery = 'INSERT INTO users (username, password, postal_code) VALUES (?, ?, ?)';
-            mysqlConnection.query(insertQuery, [email, password, postalCode], (err, results) => {
+            const insertQuery = 'INSERT INTO users (username, password, fullName) VALUES (?, ?, ?)';
+            mysqlConnection.query(insertQuery, [email, password, fullName], (err, results) => {
                 if (err) {
                     console.error('Error inserting data:', err);
                     res.status(500).json({ error: 'Error registering user' });
                 } else {
                     console.log('User registered successfully');
-                    res.json({ email, password, postalCode }); // Send user data
+                    res.json({ email, password, fullName }); // Send user data
                 }
             });
         }

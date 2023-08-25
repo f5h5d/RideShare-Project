@@ -56,10 +56,11 @@
   max-height: 65px;
   transition: max-height 0.5s;
   overflow: hidden;
+  width: 100%;
 }
 
 input {
-  width: 100%;
+  width: 100% !important;
   background-color: transparent;
   border: 0;
   outline: 0;

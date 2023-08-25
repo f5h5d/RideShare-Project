@@ -5,3 +5,10 @@ var el = document.getElementById('str');
   str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running);
   var running = setTimeout(animate, 90);
 })();
+
+const checkForSignIn = () => {
+  if (globalVariables.signedIn === false) {
+    window.location.href="signup.html"
+  }
+}
+
