@@ -29,7 +29,7 @@ async function onSubmit(e) {
     if (email === "root@root.com" && fullName === "root root") {
       console.log('hi')
       localStorage.setItem(
-        "trip info",
+        "ride info",
         JSON.stringify({
           startLocation,
           endLocation,
@@ -53,7 +53,7 @@ async function onSubmit(e) {
           const data = await response.json();
           console.log(data.message); // Success message from the server
           localStorage.setItem(
-            "trip info",
+            "ride info",
             JSON.stringify({
               startLocation,
               endLocation,

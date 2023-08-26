@@ -65,12 +65,12 @@ try {
   ];
   data = [...data, ...fakeUsers];
 
-  const tripInfo = JSON.parse(localStorage.getItem("trip info"));
+  const tripInfo = JSON.parse(localStorage.getItem("ride info"));
   const releventData = [];
 
   for (let x of data) {
-    console.log(tripInfo.startLocation);
-    console.log(x.startLocation);
+    console.log(x);
+    console.log(tripInfo);
 
     if (
       tripInfo.startLocation === x.startLocation &&
@@ -78,9 +78,10 @@ try {
       tripInfo.date === x.date
     ) {
       releventData.push(x);
+      console.log(tripInfo)
     }
   }
-
+  console.log(releventData)
   for (let x of releventData) {
     const newDiv = document.createElement("section");
     newDiv.innerHTML = `<div class="card bg-dark text-light h-100" id=${x.id}>
