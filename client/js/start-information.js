@@ -61,7 +61,7 @@ async function onSubmit(e) {
 
         if (response.ok) {
           const data = await response.json();
-          localStorage.setItem("trip info", JSON.stringify(driverData));
+          // localStorage.setItem("trip info", JSON.stringify(driverData));
           console.log(data.message); // Success message from the server
         } else {
           console.error("Error:", response.status);

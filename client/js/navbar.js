@@ -6,6 +6,7 @@ import globalVariables, {
 const findARide = document.getElementsByClassName("find-a-ride")[0];
 const startATrip = document.getElementsByClassName("start-a-trip")[0];
 const logout = document.getElementsByClassName("logout")[0];
+const myTrips = document.getElementsByClassName("my-trip")[0];
 console.log(findARide);
 
 findARide.addEventListener("click", () => {
@@ -15,15 +16,17 @@ findARide.addEventListener("click", () => {
     : (window.location.pathname = "client/pages/signUp.html");
 });
 
+myTrips.addEventListener("click", () => {
+  localStorage.getItem("signedIn") === "true"
+    ? (window.location.pathname = "client/pages/start-a-trip.html")
+    : (window.location.pathname = "client/pages/signUp.html");
+});
+
 startATrip.addEventListener("click", (event) => {
   event.preventDefault();
   console.log(localStorage.getItem("trip info"))
-  localStorage.getItem("signedIn") === "true" &&
-  localStorage.getItem("trip info") === null
+  localStorage.getItem("signedIn") === "true"
     ? (window.location.pathname = "client/pages/start-information.html")
-    : localStorage.getItem("signedIn") === "true" &&
-      localStorage.getItem("trip info") !== null
-    ? (window.location.pathname = "client/pages/start-a-trip.html")
     : (window.location.pathname = "client/pages/signUp.html");
 });
 

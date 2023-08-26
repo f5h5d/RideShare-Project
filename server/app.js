@@ -16,6 +16,14 @@ const dbConfig = {
     database: 'rideShareCarpooling',
 }
 
+const pool = mysql.createPool({
+  host: 'localhost', 
+  user: 'root',
+  password: '93ew22es', 
+  database: 'rideShareCarpooling',
+});
+
+
 // Check if email exists in the database
 function checkEmailExists(email) {
   return new Promise((resolve, reject) => {
@@ -250,30 +258,16 @@ app.post('/deleteTripByEmail', async (req, res) => {
     }
 });
 
-app.get('/getUserDataByEmail', async (req, res) => {
-    const { email } = req.query;
+app.get('/api/getTripsByEmail/:email', async (req, res) => {
+  const email = req.params.email;
 
-    try {
-        const connection = await mysql.createConnection(dbConfig);
-
-        const selectQuery = `
-            SELECT * FROM drivers
-            WHERE email = ?
-        `;
-
-        const [rows] = await connection.execute(selectQuery, [email]);
-
-        await connection.end();
-
-        if (rows.length > 0) {
-            res.status(200).json(rows[0]);
-        } else {
-            res.status(404).json({ message: 'User not found' });
-        }
-    } catch (error) {
-        console.error('Error retrieving user data by email:', error);
-        res.status(500).json({ message: 'Error retrieving user data' });
-    }
+  try {
+      const [results] = await pool.query('SELECT * FROM drivers WHERE email = ?', [email]);
+      res.json(results);
+  } catch (err) {
+      console.error('Error fetching trips:', err);
+      res.status(500).json({ error: 'An error occurred while fetching trips' });
+  }
 });
 
 
