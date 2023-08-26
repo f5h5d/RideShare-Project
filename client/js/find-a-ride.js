@@ -1,9 +1,9 @@
 try {
-  const response = await fetch("http://localhost:3000/getDrivers"); // Assumes the server is running on the same host and port
-  let data = await response.json();
-
-  // Handle the retrieved data here
-  console.log(data); // Display the data in the console or process it further
+  let data = [];
+  if (localStorage.getItem("email") !== "root@root.com" && localStorage.getItem("name") !== "root root") {
+    const response = await fetch("http://localhost:3000/getDrivers"); // Assumes the server is running on the same host and port
+  data = await response.json();
+  }
 
   const fakeUsers = [
     {
@@ -85,7 +85,7 @@ try {
 
     document.getElementsByClassName("innerContainer")[0].appendChild(newDiv);
 
-    
+
     newDiv.addEventListener("click", () => {
       console.log("hi")
     document.getElementsByClassName("modal")[0].classList.add("visible")
