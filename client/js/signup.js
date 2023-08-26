@@ -51,8 +51,13 @@ async function onSignIn() {
         const responseData = await response.json();
         console.log(responseData.message);
         if (responseData.user) {
-          console.log("User data:", responseData.user);
-          window.location.href="http://localhost:5500/client/"
+          console.log('works')
+          localStorage.setItem("signedIn", true);
+          localStorage.setItem("email", email);
+          localStorage.setItem("fullName", "root root")
+          
+          document.getElementsByClassName("invisible")[0].classList.remove("invisible")
+          window.location.pathname = "client/pages/";
         }
       } else {
         console.error("Error logging in");
