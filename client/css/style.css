@@ -19,15 +19,13 @@ body {
   background: rgb(26, 32, 45) !important;
 }
 
-
-/* .nav-link {
-  margin-bottom: 0;
-  cursor: pointer;
-} */
-
 /* MAIN */
 .header-showcase {
   border-bottom: 2px solid #6c757d;
+}
+
+.navbar {
+  font-family: 'Poppins', sans-serif;
 }
 
 .header-container { 
@@ -37,20 +35,7 @@ body {
 
 .header1 {
   width: 100%;
-  /* margin-right: 5vw; */
-  /* margin-top: 10vh; */
-  /* width: 40vw;
-  height: 55vh;
-  margin-left: 5vw;
-  margin-top: 10vh; */
 }
-
-/* .header1-image {
-  width: 45%;
-  height: 75vh;
-  width: 50vw;
-  margin-top: 10vh;
-} */
 
 #str {
   width: 100%;
@@ -206,8 +191,6 @@ body {
   border: 1px solid white;
   color: white !important;
 }
-
-
 
 /* LOG IN */
 
