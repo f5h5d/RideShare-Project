@@ -19,13 +19,11 @@ body {
   background: rgb(26, 32, 45) !important;
 }
 
-
-/* .nav-link {
-  margin-bottom: 0;
-  cursor: pointer;
-} */
-
 /* MAIN */
+.navbar {
+  font-family: 'Poppins', sans-serif;
+}
+
 .header-showcase {
   border-bottom: 2px solid #6c757d;
 }
@@ -37,29 +35,14 @@ body {
 
 .header1 {
   width: 100%;
-  /* margin-right: 5vw; */
-  /* margin-top: 10vh; */
-  /* width: 40vw;
-  height: 55vh;
-  margin-left: 5vw;
-  margin-top: 10vh; */
 }
-
-/* .header1-image {
-  width: 45%;
-  height: 75vh;
-  width: 50vw;
-  margin-top: 10vh;
-} */
 
 #str {
   width: 100%;
   padding: 20px;
   min-height: 225px;
-  /* min-height: 360px; */
   font-family: sans-serif;
   font-size: 4.5vw;
-  /* font-size: 5rem; */
   line-height: 80px;
   margin: 20px auto;
   color: #fff;
@@ -102,58 +85,7 @@ body {
 
 .carbon-emmisions-section {
   min-height: 40vh;
-  /* background: #6c757d; */
 }
-
-/* FACTS */
-
-/* .carbon-emmisions-title {
-  margin-top: 0;
-  text-align: center;
-  font-size: 6rem;
-}
-
-.fact-container {
-  width: 80vw;
-  margin-left: 10vw;
-  margin-right: 100vw;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.fact {
-  text-align: center;
-  height: 20vh;
-}
-
-.fact-1 {
-  border-right: 4px solid white;
-  border-bottom: 4px solid white;
-  color: rgb(159, 164, 173);
-}
-
-.fact-2 {
-  border-left: 4px solid white;
-  border-bottom: 4px solid white;
-  color: rgb(159, 164, 173);
-}
-
-.fact-3 {
-  border-right: 4px solid white;
-  border-top: 4px solid white;
-  color: rgb(159, 164, 173);
-}
-
-.fact-4 {
-  border-left: 4px solid white;
-  border-top: 4px solid white;
-  color: rgb(159, 164, 173);
-}
-
-.large-text {
-  font-size: 7rem;
-  height: 15vh;
-} */
 
 /* SIGN UP */
 
