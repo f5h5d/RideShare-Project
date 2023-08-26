@@ -59,9 +59,6 @@
             <li class="nav-item">
               <a href="start-information.html" class="nav-link">Start a Trip</a>
             </li>
-            <li class="nav-item">
-              <a href="#more" class="nav-link">More</a>
-            </li>
           </ul>
         </div>
       </div>
@@ -229,5 +226,15 @@
         </div>
       </div>
     </div>
+
+    <script>
+      console.log(localStorage.getItem("signedIn"))
+      if (localStorage.getItem("signedIn") == 'true') {
+        document
+          .getElementsByClassName("invisible")[0]
+          .classList.remove("invisible");
+      }
+    </script>
+
   </body>
 </html>
