@@ -1,110 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RideShare - Carpooling</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/navbar.css" rel="stylesheet" type="text/css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RideShare - Carpooling</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"
-    defer></script>
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <link href="../css/navbar.css" rel="stylesheet" type="text/css" />
+    <script type="module" src="../js/navbar.js" defer></script>
+    <script type="module" src="../js/find-a-ride.js" defer></script>
+  </head>
 
-  <script type="module" src="../js/navbar.js" defer></script>
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="https://assets.carpages.ca/dealersite/prod-wp-green-light-truck-auto/uploads/2019/12/autorttr-suv.png"
-          width="54" height="30" class="d-inline-block align-top ml-2" alt="">
-        Community RideShare
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <p class="nav-link find-a-ride" >Find a Ride</p>
-          </li>
-          <li class="nav-item">
-            <p class="nav-link start-a-trip" >Start a trip</p>
-          </li>
-          <li class="nav-item">
-            <p href="" class="nav-link logout text-danger invisible">Log out</p>
-          </li>
-        </ul>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="https://assets.carpages.ca/dealersite/prod-wp-green-light-truck-auto/uploads/2019/12/autorttr-suv.png"
+            width="54"
+            height="30"
+            class="d-inline-block align-top ml-2"
+            alt=""
+          />
+          Community RideShare
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <p class="nav-link find-a-ride">Find a Ride</p>
+            </li>
+            <li class="nav-item">
+              <p class="nav-link start-a-trip">Start a trip</p>
+            </li>
+            <li class="nav-item">
+              <p href="" class="nav-link logout text-danger invisible">
+                Log out
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <section class="bg-light p-5 mt-5">
+    </nav>
+
+    <section class="bg-light p-5 mt-5">
       <div class="container text-center">
         <div>
-          <h4 class="p-3 mb-3 text-warning mb-md-5 text-center">Find a Ride Near You</h4>
+          <h1 class="p-3 mt-4 text-dark text-center">Find a Ride Near You</h1>
         </div>
       </div>
-    </section> 
+    </section>
     <section>
       <div class="container">
-        <div class="row text-center g-4 m">
+        <div class="row g-4 mt-4 innerContainer">
           <div>
             <div class="card bg-dark text-light h-100">
-              <div class="card-body text-center">
-                <h2 class="card-title text-warning">Distance from you</h2>
-                <p class="card-text">Name(s) - Destination(s) - Number(s) in a column</p>
+              <div class="card-body">
+                <div>
+                  <p class="card-title text-warning fs-1 fw-bold">
+                    Place to Place
+                  </p>
+                  <p class="fs-4">Name</p>
+                </div>
+                <div>
+                  <p class="card-text fs-4">
+                    Destination:<br />FAX: <br />Seats Left:
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <div>
             <div class="card bg-dark text-light h-100">
-              <div class="card-body text-center">
-                <h2 class="card-title text-warning">39%</h2>
-                <p class="card-text">
-                  is how much passenger vehicles account for yearly
-                  transportation emissions
-                </p>
+              <div class="card-body">
+                <div>
+                  <p class="card-title text-warning fs-1 fw-bold">
+                    Place to Place
+                  </p>
+                  <p class="fs-4">Name</p>
+                </div>
+                <div>
+                  <p class="card-text fs-4">
+                    Destination:<br />FAX: <br />Seats Left:
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <div>
             <div class="card bg-dark text-light h-100">
-              <div class="card-body text-center">
-                <h2 class="card-title text-warning">4.2 Million</h2>
-                <p class="card-text">
-                  premature deaths are caused by air pollution each year
-                </p>
+              <div class="card-body">
+                <div>
+                  <p class="card-title text-warning fs-1 fw-bold">
+                    Place to Place
+                  </p>
+                  <p class="fs-4">Name</p>
+                </div>
+                <div>
+                  <p class="card-text fs-4">
+                    Destination:<br />FAX: <br />Seats Left:
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <div>
             <div class="card bg-dark text-light h-100">
-              <div class="card-body text-center">
-                <h2 class="card-title text-warning">144 Hours</h2>
-                <p class="card-text">
-                  is how long a driver in major Canadian cities might spend in
-                  traffic per year
-                </p>
+              <div class="card-body">
+                <div>
+                  <p class="card-title text-warning fs-1 fw-bold">
+                    Place to Place
+                  </p>
+                  <p class="fs-4">Name</p>
+                </div>
+                <div>
+                  <p class="card-text fs-4">
+                    Destination:<br />FAX: <br />Seats Left:
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-  </section>
+    </section>
 
-  <script>
-    console.log(localStorage.getItem("signedIn"))
-    if (localStorage.getItem("signedIn") == 'true') {
-      document
-        .getElementsByClassName("invisible")[0]
-        .classList.remove("invisible");
-    }
-  </script>
-</body>  
-  
+    <div class="modal visible" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-dark">Ride Confirmation</h5>
+            <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-dark">
+            <p class="text-dark">Would you like to confirm joining this person's Carpool? Note that an email will be sent to this person with your contact information and you must figure out timings on your own accord</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning">Confirm</button>
+            <button type="button" class="btn btn-dark" data-dismiss="modal" id="cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+      console.log(localStorage.getItem("signedIn"));
+      if (localStorage.getItem("signedIn") == "true") {
+        document
+          .getElementsByClassName("invisible")[0]
+          .classList.remove("invisible");
+      }
+
+      document.getElementById("close").addEventListener("click", () => {
+        document.getElementsByClassName("modal")[0].classList.remove("visible")
+      })
+
+      document.getElementById("cancel").addEventListener("click", () => {
+        document.getElementsByClassName("modal")[0].classList.remove("visible")
+      })
+    </script>
+  </body>
 </html>

@@ -7,7 +7,7 @@ const connection = mysql.createConnection({
   database: 'rideShareCarpooling',  // The name of the database you created
 });
 
-const tableName = 'users'; // Replace with the actual table name
+const tableName = 'driver'; // Replace with the actual table name
 
 const dropQuery = `DROP TABLE IF EXISTS ${tableName};`;
 

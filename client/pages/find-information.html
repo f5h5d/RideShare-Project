@@ -11,10 +11,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script type="text/javascript" src="../js/signup.js" defer></script>
-
-    <script type="module" src="../js/signup.js" defer></script>
-
+    <script type="module" src="../js/find-information.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -68,12 +65,12 @@
     </nav>
 
     <div class="form-container">
-      <div class="form-box">
+      <div class="form-box form-box-rider">
         <h1 id="title">Rider Information</h1>
         <form>
           <div class="input-group">
-            <select class="custom-select input-field" id="inputGroupSelect01">
-              <option selected>Choose...</option>
+            <select class="custom-select input-field starting-location" id="inputGroupSelect01">
+              <option selected>Starting Location</option>
               <option value="Bancroft">Bancroft</option>
               <option value="Barrie">Barrie</option>
               <option value="Belleville">Belleville</option>
@@ -140,8 +137,8 @@
               <option value="York">York</option>
             </select>
 
-            <select class="custom-select input-field" id="inputGroupSelect01">
-              <option selected>Choose...</option>
+            <select class="custom-select input-field ending-location" id="inputGroupSelect01">
+              <option selected>Ending Location</option>
               <option value="Bancroft">Bancroft</option>
               <option value="Barrie">Barrie</option>
               <option value="Belleville">Belleville</option>
@@ -209,7 +206,7 @@
             </select>
             <div class="input-field">
               <i class="fa-regular fa-calendar"></i>
-              <input type="date" name="leaving" />
+              <input type="date" name="leaving" class="date" />
             </div>
             <!-- <div class="input-field">
               <i class="fa-regular fa-calendar"></i>
@@ -217,13 +214,11 @@
             </div> -->
             <div class="input-field">
               <i class="fa-solid fa-phone"></i>
-              <input type="tel" id="phone" placeholder="Phone Number" />
+              <input type="number" id="phone" name="someid" placeholder="Phone Number" />
             </div>
 
             <div class="btn-field">
               <button
-                type="submit"
-                formaction="find-a-ride.html"
                 id="signupBtn"
               >
                 Continue

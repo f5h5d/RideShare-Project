@@ -1,57 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RideShare - Carpooling</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/navbar.css" rel="stylesheet" type="text/css" />
+    <script type="module" src="../js/navbar.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RideShare - Carpooling</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"
-    defer></script>
-  <link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <link href="../css/navbar.css" rel="stylesheet" type="text/css" />
-  <script type="module" src="../js/navbar.js" defer></script>
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="https://assets.carpages.ca/dealersite/prod-wp-green-light-truck-auto/uploads/2019/12/autorttr-suv.png"
-          width="54" height="30" class="d-inline-block align-top ml-2" alt="">
-        Community RideShare
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <p class="nav-link find-a-ride" >Find a Ride</p>
-          </li>
-          <li class="nav-item">
-            <p class="nav-link start-a-trip" >Start a trip</p>
-          </li>
-          <li class="nav-item">
-            <p href="" class="nav-link logout text-danger invisible">Log out</p>
-          </li>
-        </ul>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="https://assets.carpages.ca/dealersite/prod-wp-green-light-truck-auto/uploads/2019/12/autorttr-suv.png"
+            width="54"
+            height="30"
+            class="d-inline-block align-top ml-2"
+            alt=""
+          />
+          Community RideShare
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <p class="nav-link find-a-ride">Find a Ride</p>
+            </li>
+            <li class="nav-item">
+              <p class="nav-link start-a-trip">Start a trip</p>
+            </li>
+            <li class="nav-item">
+              <p href="" class="nav-link logout text-danger invisible">
+                Log out
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+    <section class="bg-light p-5 mt-5">
+      <div class="container text-center">
+        <div>
+          <h1 class="p-3 mt-4 text-dark text-center">Your Trip</h1>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row g-4 mt-4">
+          <div>
+            <div class="card bg-dark text-light h-100">
+              <div class="card-body">
+                <div>
+                  <p class="card-title text-warning fs-1 fw-bold">
+                    Place to Place
+                  </p>
+                  <p class="fs-4">Name</p>
+                </div>
+                <div>
+                  <p class="card-text fs-4">
+                    Destination:<br />FAX: <br />Seats Left:
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-  <script>
-    console.log(localStorage.getItem("signedIn"))
-    if (localStorage.getItem("signedIn") == 'true') {
-      document
-        .getElementsByClassName("invisible")[0]
-        .classList.remove("invisible");
-    }
-  </script>
-</body>
-  
+    <script>
+      console.log(localStorage.getItem("signedIn"));
+      if (localStorage.getItem("signedIn") == "true") {
+        document
+          .getElementsByClassName("invisible")[0]
+          .classList.remove("invisible");
+      }
+    </script>
+  </body>
 </html>
