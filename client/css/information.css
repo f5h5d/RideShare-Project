@@ -1,120 +1,191 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+:root {
+  --bg: rgb(26, 32, 45);
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  box-sizing: border-box;
+  color: white;
 }
 
-.form-container {
+html {
+  height: 100%;
   width: 100%;
-  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: rgb(26, 32, 45);
+}
+
+body {
   background: rgb(26, 32, 45) !important;
-  position: relative;
 }
 
-.form-box-rider {
-  width: 90%;
-  height: 36em;
-  max-width: 450px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  padding: 50px 60px 70px;
-  text-align: center;
+/* MAIN */
+.header-showcase {
+  border-bottom: 2px solid #6c757d;
 }
 
-.form-box-driver {
-  width: 90%;
-  height: 41em;
-  max-width: 450px;
-  position: absolute;
-  top: 52%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  padding: 50px 60px 70px;
-  text-align: center;
+.header-container { 
+  margin-top: 7vh;
+  display: flex;
 }
 
-.form-box h1 {
-  font-size: 30px;
-  margin-bottom: 60px;
-  color: black;
-  position: relative;
+.header1 {
+  width: 100%;
+}
+
+#str {
+  width: 100%;
+  padding: 20px;
+  min-height: 225px;
+  font-family: sans-serif;
+  font-size: 4.5vw;
+  line-height: 80px;
+  margin: 20px auto;
+  color: #fff;
   font-weight: bold;
 }
 
-.form-box h1::after {
-  content: '';
-  width: 30px;
-  height: 4px;
-  border-radius: 3px;
-  background: black;
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
+#str:after {
+  content: "|";
+  animation: blink 1s infinite 5s;
 }
 
-select {
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button {
+  background: none;
   outline: none;
-  border: none;
-  padding: 10px;
+  border: 1px solid #ffc107;
+  padding: 1rem 2rem;
+  margin: 0 0.5vw;
+  border-radius: 4px;
 }
 
-.input-field {
-  width: 100%;
-  background-color: #eaeaea;
-  margin: 15px 0;
-  border-radius: 3px;
-  display: flex;
-  align-items: center;
-  max-height: 65px;
-  transition: max-height 0.5s;
-  overflow: hidden;
+.button-signup:hover {
+  background: #ffc107;
 }
 
-input {
-  width: 100%;
-  background-color: transparent;
-  border: 0;
-  outline: 0;
-  padding: 18px 15px;
+.button-login:hover {
+  background: #ffc107;
 }
 
-.input-field i {
-  margin-left: 15px;
-  
+.carbon-emmisions-section {
+  min-height: 40vh;
 }
 
-.btn-field {
-  width: 100%;
+.card-body {
   display: flex;
   justify-content: space-between;
 }
 
-.btn-field button {
-  flex-basis: 48%;
-  background: #ffc107;
-  color: #111;
-  height: 40px;
-  border-radius: 20px;
-  width: 120px;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-  transition: background 1s;
+/* SIGN UP */
+
+.sign-up-header>h1 {
+  font-size: 8rem;
+  text-align: center;
 }
 
-.input-group {
-  height: 280px;
+.form-container {
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.btn-field button.disable {
-  background: #eaeaea;
-  color: #555;
+.signup-form {
+  width: 80vw;
+  height: 30vh;
+  border-radius: 4px;
+  margin: 1vh;
+}
+
+.signup {
+  margin-top: 200px;
+  margin: 15px 50px;
+}
+
+.form-box {
+  margin-top: 50px;
+}
+
+.signup-address {
+  margin: 10px 65px;
+}
+
+.sign-up-btn {
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+  margin-left: 60px;
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+
+.sign-up-btn:hover {
+  background: transparent;
+  border: 1px solid white;
+  color: white !important;
+}
+
+
+
+/* LOG IN */
+
+.login-header>h1 {
+  font-size: 8rem;
+  text-align: center;
+}
+
+.form-container-login {
+  width: 100vw;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.login-form {
+  width: 80vw;
+  height: 25vh;
+  border-radius: 4px;
+  margin: 1vh;
+}
+
+.login {
+  margin-top: 200px;
+  margin: 15px 50px;
+}
+
+.form-box-login {
+  margin-top: 50px;
+}
+
+.login-btn {
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+  margin-left: 60px;
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+
+.login-btn:hover {
+  background: transparent;
+  border: 1px solid white;
+  color: white !important;
 }
