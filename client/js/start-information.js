@@ -1,9 +1,11 @@
+
+
 const continueBtn = document.getElementById("signupBtn");
 
 function isTodayOrFuture(dateString) {
   const inputDate = new Date(dateString);
   const today = new Date();
-  
+
   // Set hours, minutes, seconds, and milliseconds to 0 for accurate comparison
   today.setHours(0, 0, 0, 0);
 
@@ -23,8 +25,10 @@ async function onSubmit(e) {
 
   if (
     startLocation !== "Starting Location" &&
-    endLocation !== "Ending Location" && startLocation !== endLocation && 
-    date !== "" && isTodayOrFuture(date) &&
+    endLocation !== "Ending Location" &&
+    startLocation !== endLocation &&
+    date !== "" &&
+    isTodayOrFuture(date) &&
     phoneNumber.length == 10 &&
     seats > 0
   ) {
@@ -43,26 +47,32 @@ async function onSubmit(e) {
       seats,
     };
 
-    try {
-      const response = await fetch("http://localhost:3000/addDriver", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(driverData),
-      });
+    if (localStorage.getItem("email") === "root@root.com") {
+      localStorage.setItem("trip info", JSON.stringify(driverData));
+    } else {
+      try {
+        const response = await fetch("http://localhost:3000/addDriver", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(driverData),
+        });
 
-      if (response.ok) {
-        const data = await response.json();
-        console.log(data.message); // Success message from the server
-      } else {
-        console.error("Error:", response.status);
-        // Handle error response
+        if (response.ok) {
+          const data = await response.json();
+          localStorage.setItem("trip info", JSON.stringify(driverData));
+          console.log(data.message); // Success message from the server
+        } else {
+          console.error("Error:", response.status);
+          // Handle error response
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        // Handle fetch error
       }
-    } catch (error) {
-      console.error("Error:", error);
-      // Handle fetch error
     }
+    window.location.pathname = "client/pages/start-a-trip.html"
   }
 }
 

@@ -185,6 +185,97 @@ app.get('/getDrivers', async (req, res) => {
 });
 
 
+app.post('/decreaseSeatsByEmail', async (req, res) => {
+    const { email } = req.body;
+
+    try {
+        const connection = await mysql.createConnection(dbConfig);
+
+        // Update query to decrease seats by one and delete if seats become 0
+        const updateQuery = `
+            UPDATE drivers
+            SET seats = seats - 1
+            WHERE email = ?
+        `;
+
+        const [result] = await connection.execute(updateQuery, [email]);
+
+        // If seats become 0, delete the data point
+        if (result.affectedRows > 0) {
+            if (result.changedRows > 0) {
+                const deleteQuery = `
+                    DELETE FROM drivers
+                    WHERE email = ? AND seats = 0
+                `;
+
+                await connection.execute(deleteQuery, [email]);
+                res.status(200).json({ message: 'Seats decreased and data point deleted successfully' });
+            } else {
+                res.status(200).json({ message: 'Seats decreased successfully' });
+            }
+        } else {
+            res.status(404).json({ message: 'Driver not found' });
+        }
+
+        await connection.end();
+    } catch (error) {
+        console.error('Error decreasing seats by email:', error);
+        res.status(500).json({ message: 'Error decreasing seats' });
+    }
+});
+
+app.post('/deleteTripByEmail', async (req, res) => {
+    const { email } = req.body;
+
+    try {
+        const connection = await mysql.createConnection(dbConfig);
+
+        const deleteQuery = `
+            DELETE FROM drivers
+            WHERE email = ?
+        `;
+
+        const [result] = await connection.execute(deleteQuery, [email]);
+
+        if (result.affectedRows > 0) {
+            res.status(200).json({ message: 'Trip deleted successfully' });
+        } else {
+            res.status(404).json({ message: 'Trip not found' });
+        }
+
+        await connection.end();
+    } catch (error) {
+        console.error('Error deleting trip by email:', error);
+        res.status(500).json({ message: 'Error deleting trip' });
+    }
+});
+
+app.get('/getUserDataByEmail', async (req, res) => {
+    const { email } = req.query;
+
+    try {
+        const connection = await mysql.createConnection(dbConfig);
+
+        const selectQuery = `
+            SELECT * FROM drivers
+            WHERE email = ?
+        `;
+
+        const [rows] = await connection.execute(selectQuery, [email]);
+
+        await connection.end();
+
+        if (rows.length > 0) {
+            res.status(200).json(rows[0]);
+        } else {
+            res.status(404).json({ message: 'User not found' });
+        }
+    } catch (error) {
+        console.error('Error retrieving user data by email:', error);
+        res.status(500).json({ message: 'Error retrieving user data' });
+    }
+});
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

@@ -22,6 +22,7 @@
 
     <script type="module" src="../js/navbar.js" defer></script>
     <script type="module" src="../js/find-a-ride.js" defer></script>
+    
   </head>
 
   <body>
@@ -72,8 +73,7 @@
     </section>
     <section>
       <div class="container">
-        <div class="row g-4 mt-4 innerContainer">
-        </div>
+        <div class="row g-4 mt-4 innerContainer"></div>
       </div>
     </section>
 
@@ -82,36 +82,46 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title text-dark">Ride Confirmation</h5>
-            <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close">
+            <button
+              type="button"
+              class="close"
+              id="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body text-dark">
-            <p class="text-dark">Would you like to confirm joining this person's Carpool? Note that an email will be sent to this person with your contact information and you must figure out timings on your own accord</p>
+            <p class="text-dark">
+              Would you like to confirm joining this person's Carpool? Note that
+              an email will be sent to this person with your contact information
+              and you must figure out timings on your own accord
+            </p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-warning">Confirm</button>
-            <button type="button" class="btn btn-dark" data-dismiss="modal" id="cancel">Cancel</button>
+            <button type="button" class="btn btn-warning" id="confirm">
+              Confirm
+            </button>
+            <button
+              type="button"
+              class="btn btn-dark"
+              data-dismiss="modal"
+              id="cancel"
+            >
+              Cancel
+            </button>
           </div>
         </div>
       </div>
     </div>
     <script>
-
-      console.log(localStorage.getItem("signedIn"));
-      if (localStorage.getItem("signedIn") == "true") {
+      console.log(localStorage.getItem("signedIn"))
+      if (localStorage.getItem("signedIn") == 'true') {
         document
           .getElementsByClassName("invisible")[0]
           .classList.remove("invisible");
       }
-
-      document.getElementById("close").addEventListener("click", () => {
-        document.getElementsByClassName("modal")[0].classList.remove("visible")
-      })
-
-      document.getElementById("cancel").addEventListener("click", () => {
-        document.getElementsByClassName("modal")[0].classList.remove("visible")
-      })
     </script>
   </body>
 </html>

@@ -260,3 +260,10 @@ body {
 .visible {
   display: block;
 }
+
+.trip-cancel {
+  outline: none;
+  border: none;
+  background: #ffc107;
+  border-radius: 4px;
+}

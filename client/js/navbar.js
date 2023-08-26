@@ -10,19 +10,24 @@ console.log(findARide);
 
 findARide.addEventListener("click", () => {
   console.log(globalVariables.signedIn);
-  localStorage.getItem("signedIn")  === "true"
+  localStorage.getItem("signedIn") === "true"
     ? (window.location.pathname = "client/pages/find-information.html")
     : (window.location.pathname = "client/pages/signUp.html");
 });
 
-startATrip.addEventListener("click", () => {
-  localStorage.getItem("signedIn") === "true"
+startATrip.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log(localStorage.getItem("trip info"))
+  localStorage.getItem("signedIn") === "true" &&
+  localStorage.getItem("trip info") === null
     ? (window.location.pathname = "client/pages/start-information.html")
+    : localStorage.getItem("signedIn") === "true" &&
+      localStorage.getItem("trip info") !== null
+    ? (window.location.pathname = "client/pages/start-a-trip.html")
     : (window.location.pathname = "client/pages/signUp.html");
 });
 
 logout.addEventListener("click", () => {
-  localStorage.setItem("signedIn", false)
+  localStorage.setItem("signedIn", false);
   window.location.pathname = "client/pages/signUp.html";
 });
-
